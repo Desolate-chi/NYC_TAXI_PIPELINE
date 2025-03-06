@@ -6,9 +6,10 @@ In an era when there is a constant increase in data, data storage has become vit
 
 **Data Preparation:**
 
-The 
-
-
+In other to achieve this we first need to understand the step needed to take
+1. A new directory is needed to ensure all the files created will be safe in a single file and for that GIT BASH was used
+2. A docker file which handled the building of the images.
+3. The python script that will perform the entire ETL process and a PG network to establish a connection between the database and GUI tool
 
 **Data Processing:**
 
