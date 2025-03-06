@@ -13,31 +13,25 @@ In other to achieve this we first need to understand the step needed to take
 
 **Data Processing:**
 
-Eagerly delving into the data analysis, I quickly realized that the task at hand was more challenging than anticipated. While the dataset was excellent, I sensed a need for additional elements to breathe life into it. Returning to the drawing board, I conceptualized and implemented the insertion of new columns, including GENRE, CATEGORY, and COUNTRY PRODUCED.
+Going into this project i knew it wasnt going to be an easy work flow, from the get go i was already facing challenges but they werent something i wasnt ready for. Under is a list of the challenges and how i was able to overcome them
 
  
 **Data Cleaning:**
 
-As the dataset underwent evolution, two crucial goals were identified to ensure its completeness:
-1.	The original Netflix dataset comprised 17,000 rows, and upon validating its integrity, I discovered a concerning issue with the 'year release' column, containing 10,000 missing values. To address this challenge and meet project deadlines, I took the following steps:
- 
-
-   - Reduced the dataset to its top 10% for analysis.
-   - Filled in missing values using resources from websites such as WHAT’S ON NETFLIX.COM and NEWONNETFLIX.COM.
-   
-2. The second goal involved handling missing values in the newly created columns, which was successfully accomplished with the assistance of IMDB and ROTTENTOMATOES.
+As the process of ingestion began, three crucial challenges were uncovered as the underwent the work flow process:
+1.	The data was saved in a parquet format and for us to achieve our goal a csv file is required. To achieve this we needed to download the orignal file first afterwards we write a script which will convert the parquet file to a csv doc.
+2.	The second cleaning was in found in the metadata of the datetime column which was originally in real data type which was converted to a datetime data type, this was achieved after the importation of sqlalchemy.
+3.	The thrid challenge was creating a link between the data in the database and a gui which will be used to query the dataset using sql. To achieve this PGnetwork was used this provided a connection between the database and our database manager which is PGadmin
 
 **Data Analysis and Investment Insights:**
 
 This project is meticulously designed to offer indispensable insights for investors navigating the dynamic landscape of the entertainment sector. It addresses pivotal questions that are paramount for strategic decision-making in the realm of entertainment investments. The key inquiries encompass:
-1. Choosing Between TV Shows and Movies:
-   - Uncover the comparative financial viability of financing TV shows versus movies. Gain clarity on the more lucrative investment avenue.
-2. Optimal Movie Production Countries:
-   - Identify the top three countries presenting the most promising investment opportunities for movie production. Delve into geographical insights to inform strategic investment decisions.
-3. Profitable Genre Investment:
-   - Ascertain the most profitable genre for investment within the entertainment industry. Navigate the diverse landscape of genres to maximize returns on investment.
-4. Monthly Release Dynamics:
-   - Pinpoint the month with the highest release rate in the year. Understand the temporal dynamics of content release to optimize investment timing.
+1. Total Monthly Sales of the Year:
+   - Uncover the competitive financial transcation of each month . Gain clarity on which month is their highest paying and the reason behind it.
+2. Highest the top Transcation made:
+   - Identify the top destination with the highest payout made that year, its relationship to destinations with the highest request and how much impact the destinations with the highest payout affect the Grand Total transcations made that year.
+3. Most Common destination:
+   - Discover which destination has the highest request by passengers and how much impact it has on the overall transcation for that year.
 These critical inquiries serve as the foundation for informed decision-making in the entertainment sector. Through comprehensive data visualizations derived from thorough dataset analysis, this project illuminates the path for investors seeking strategic and lucrative opportunities in the ever-evolving world of entertainment.
 
  
